@@ -1,7 +1,7 @@
 {  
-  "name": "Python 3",
+  "name": "Python 3.12",
   // Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
-  "image": "mcr.microsoft.com/devcontainers/python:0-3.10-bullseye",
+  "image": "mcr.microsoft.com/devcontainers/python:1-3.12-bookworm",
   "features": {
     "ghcr.io/devcontainers-contrib/features/coverage-py:2": {}
   },
@@ -14,7 +14,7 @@
     "vscode": {
       // Set *default* container specific settings.json values on container create.
       "settings": {
-        "terminal.integrated.shell.linux": "/bin/bash"
+        "terminal.integrated.defaultProfile.linux": "bash"
       },
       // Add the IDs of extensions you want installed when the container is created.
       "extensions": [
@@ -27,6 +27,7 @@
   },
   // Update welcome text and set terminal prompt to '$ '
   "onCreateCommand": "echo PS1='\"$ \"' >> ~/.bashrc",
+  "postCreateCommand": "python -m pip install --upgrade pip && python -m pip install --upgrade -r requirements.txt",
   // Pull all branches
   "postAttachCommand": "git pull --all"
 }

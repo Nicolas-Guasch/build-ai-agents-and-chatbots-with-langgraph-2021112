@@ -9,6 +9,22 @@ This is the repository for the LinkedIn Learning course `Build AI Agents and Cha
 
 <p>This course is integrated with GitHub Codespaces, an instant cloud developer environment that offers all the functionality of your favorite IDE without the need for any local machine setup. With GitHub Codespaces, you can get hands-on practice from any machine, at any time—all while using a tool that you’ll likely encounter in the workplace. Check out “Setting up GitHub Codespaces" with this course to learn how to get started.</p>
 
+## Python 3.12 in GitHub Codespaces
+
+This repository is configured to use Python 3.12 in Codespaces through `.devcontainer/devcontainer.json`:
+
+```json
+"image": "mcr.microsoft.com/devcontainers/python:1-3.12-bookworm"
+```
+
+To apply this to an existing Codespace, open the Command Palette and run `Codespaces: Rebuild Container`. For a new Codespace, GitHub will use the updated image automatically. After the rebuild, verify the interpreter with:
+
+```bash
+python --version
+```
+
+The notebooks expect the Python 3.12 kernel and install their package set from `requirements.txt`.
+
 
 [0]: # (Replace these placeholder URLs with actual course URLs)
 

@@ -1,1 +1,11 @@
-# Specify Python package requirements for your project here (e.g., Mako==1.1.1). If your project doesn't require these, you can leave this file unchanged or delete it.
+tenacity
+langchain
+langchain-openai
+langchain-community
+langgraph
+pysqlite3-binary
+langchain-chroma
+pandas
+pypdf
+nbformat
+ipykernel
